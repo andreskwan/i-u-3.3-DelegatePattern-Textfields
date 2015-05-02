@@ -65,8 +65,11 @@ class EmojiTextFieldDelegate : NSObject, UITextFieldDelegate {
         }
         
     }
-    
     func textFieldDidBeginEditing(textField: UITextField) {
         textField.text = ""
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true;
     }
 }
