@@ -11,7 +11,7 @@ import UIKit
 
 class EmojiTextFieldDelegate : NSObject, UITextFieldDelegate {
     
-    let translations = [String : String]()
+    var translations = [String : String]()
     
     override init() {
         super.init()
@@ -58,7 +58,7 @@ class EmojiTextFieldDelegate : NSObject, UITextFieldDelegate {
         // If we have replaced an emoji, then we directly edit the text field
         // Otherwise we allow the proposed edit.
         if replacedAnEmoji {
-            textField.text = newText
+            textField.text = newText as String
             return false
         } else {
             return true

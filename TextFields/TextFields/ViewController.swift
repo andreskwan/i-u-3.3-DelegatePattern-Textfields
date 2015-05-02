@@ -52,5 +52,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // returning true gives the text field permission to change its text
         return true;
     }
+    func textFieldDidEndEditing(textField: UITextField) {
+        var finalText : NSString = self.textField3.text
+        self.characterCountLabel.text = "Total: " + String(finalText.length)
+    }
 }
 
