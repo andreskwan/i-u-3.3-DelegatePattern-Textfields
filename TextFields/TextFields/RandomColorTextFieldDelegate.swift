@@ -10,29 +10,23 @@ import Foundation
 import UIKit
 
 class RandomColorTextFieldDelegate: NSObject, UITextFieldDelegate {
-    // Text Field Delegate Methods
-    // how to identify the obj that send the message? 
-    // is self? 
+            // Text Field Delegate Methods
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        
-        // Figure out what the new text will be, if we return true
-        var newText: NSString = textField.text
-        newText = newText.stringByReplacingCharactersInRange(range, withString: string)
-        
-        // hide the label if the newText will be an empty string
-//        self.characterCountLabel.hidden = (newText.length == 0)
-        
-        // Write the length of newText into the label
-//        self.characterCountLabel.text = String(newText.length)
-        
-        // returning true gives the text field permission to change its text
+        textField.textColor = self.randomColor()
+        return true
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         return true;
     }
-    func textFieldDidEndEditing(textField: UITextField) {
-        var finalText : NSString = textField.text
-        textField.text = textField.text + " | Total: " + String(finalText.length)
+    func textFieldShouldClear(textField: UITextField) -> Bool {
+        return true;
     }
-    func textFieldDidBeginEditing(textField: UITextField) {
-        textField.text = ""
+    func randomColor() -> UIColor {
+        var randomColor = UIColor(red: randomCGFloat(), green: randomCGFloat(), blue: randomCGFloat(), alpha: 1.0)
+        return randomColor
+    }
+    func randomCGFloat() -> CGFloat {
+        return CGFloat(Float(arc4random()) / Float(UINT32_MAX))
     }
 }
