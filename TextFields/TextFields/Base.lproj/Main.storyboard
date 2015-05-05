@@ -28,7 +28,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x8x-lW-EqZ">
-                                <rect key="frame" x="16" y="104" width="288" height="30"/>
+                                <rect key="frame" x="16" y="104" width="228" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -38,20 +38,28 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S04-wz-o1B">
+                                <rect key="frame" x="255" y="104" width="51" height="31"/>
+                                <connections>
+                                    <action selector="enableWriteOnTextField:" destination="vXZ-lx-hvc" eventType="valueChanged" id="zv5-OW-NVX"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
-                            <constraint firstItem="FND-fQ-FKU" firstAttribute="top" secondItem="b5d-35-VHU" secondAttribute="bottom" constant="8" symbolic="YES" id="8a9-ma-Cz8"/>
-                            <constraint firstItem="x8x-lW-EqZ" firstAttribute="top" secondItem="FND-fQ-FKU" secondAttribute="bottom" constant="8" symbolic="YES" id="QhM-bM-KMa"/>
-                            <constraint firstItem="b5d-35-VHU" firstAttribute="trailing" secondItem="FND-fQ-FKU" secondAttribute="trailing" id="gWy-KM-ogw"/>
-                            <constraint firstItem="b5d-35-VHU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="hPG-EP-yqP"/>
-                            <constraint firstItem="FND-fQ-FKU" firstAttribute="leading" secondItem="x8x-lW-EqZ" secondAttribute="leading" id="jTV-85-GeV"/>
-                            <constraint firstItem="x8x-lW-EqZ" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="pFE-3q-kt6"/>
-                            <constraint firstItem="b5d-35-VHU" firstAttribute="leading" secondItem="FND-fQ-FKU" secondAttribute="leading" id="psv-vn-0r0"/>
-                            <constraint firstItem="FND-fQ-FKU" firstAttribute="trailing" secondItem="x8x-lW-EqZ" secondAttribute="trailing" id="pvB-N1-QVk"/>
-                            <constraint firstItem="x8x-lW-EqZ" firstAttribute="centerX" secondItem="vX4-tH-Tjk" secondAttribute="centerX" id="vt0-b5-veg"/>
-                            <constraint firstItem="FND-fQ-FKU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="vto-FH-6wk"/>
-                            <constraint firstItem="vX4-tH-Tjk" firstAttribute="top" secondItem="x8x-lW-EqZ" secondAttribute="bottom" constant="29" id="zfz-g4-DdI"/>
+                            <constraint firstItem="x8x-lW-EqZ" firstAttribute="leading" secondItem="FND-fQ-FKU" secondAttribute="leading" id="09S-3R-dhA"/>
+                            <constraint firstItem="b5d-35-VHU" firstAttribute="leading" secondItem="FND-fQ-FKU" secondAttribute="leading" id="45t-y9-3o6"/>
+                            <constraint firstItem="FND-fQ-FKU" firstAttribute="trailing" secondItem="b5d-35-VHU" secondAttribute="trailing" id="5DN-P0-ZyS"/>
+                            <constraint firstItem="S04-wz-o1B" firstAttribute="leading" secondItem="x8x-lW-EqZ" secondAttribute="trailing" constant="11" id="6L1-jo-TPe"/>
+                            <constraint firstItem="b5d-35-VHU" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="6yD-5F-AVE"/>
+                            <constraint firstItem="x8x-lW-EqZ" firstAttribute="top" secondItem="FND-fQ-FKU" secondAttribute="bottom" constant="8" symbolic="YES" id="DbN-Ym-LeI"/>
+                            <constraint firstItem="S04-wz-o1B" firstAttribute="top" secondItem="x8x-lW-EqZ" secondAttribute="top" id="H57-c1-1Mo"/>
+                            <constraint firstItem="b5d-35-VHU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="MM7-Mw-NI3"/>
+                            <constraint firstItem="vX4-tH-Tjk" firstAttribute="top" secondItem="x8x-lW-EqZ" secondAttribute="bottom" constant="29" id="PJf-V8-Fyh"/>
+                            <constraint firstItem="FND-fQ-FKU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="fnd-HV-31a"/>
+                            <constraint firstItem="S04-wz-o1B" firstAttribute="trailing" secondItem="FND-fQ-FKU" secondAttribute="trailing" id="kKW-RV-eo3"/>
+                            <constraint firstItem="FND-fQ-FKU" firstAttribute="centerX" secondItem="vX4-tH-Tjk" secondAttribute="centerX" id="lhU-yg-Np1"/>
+                            <constraint firstItem="FND-fQ-FKU" firstAttribute="top" secondItem="b5d-35-VHU" secondAttribute="bottom" constant="8" symbolic="YES" id="ueE-nR-nLU"/>
                         </constraints>
                     </view>
                     <connections>
@@ -59,6 +67,7 @@
                         <outlet property="textField1" destination="b5d-35-VHU" id="JJa-zq-XKJ"/>
                         <outlet property="textField2" destination="FND-fQ-FKU" id="wKW-y7-Gz9"/>
                         <outlet property="textField3" destination="x8x-lW-EqZ" id="D4x-7k-BPl"/>
+                        <outlet property="writeControl" destination="S04-wz-o1B" id="cVi-8r-c88"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

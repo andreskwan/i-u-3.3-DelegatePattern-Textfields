@@ -15,6 +15,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textField2: UITextField!
     @IBOutlet weak var textField3: UITextField!
     @IBOutlet weak var characterCountLabel: UILabel!
+    @IBOutlet weak var writeControl: UISwitch!
+    //
+    var isWriteEnable = false
     
     // Text Field Delegate objects
     let emojiDelegate = EmojiTextFieldDelegate()
@@ -34,10 +37,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Set the three delegates
         self.textField1.delegate = zipCodeDelegate
         self.textField2.delegate = colorizerDelegate
-        self.textField3.delegate = randomColorDelegate
+        self.textField3.delegate = self
     }
+    
+    @IBAction func enableWriteOnTextField(sender: UISwitch) {
+        isWriteEnable = writeControl.on ? true : false
+    }
+    
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        
+    
+        if isWriteEnable {
         // Figure out what the new text will be, if we return true
         var newText: NSString = textField.text
         newText = newText.stringByReplacingCharactersInRange(range, withString: string)
@@ -50,6 +59,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         // returning true gives the text field permission to change its text
         return true;
+        }
+        return false
     }
     func textFieldDidEndEditing(textField: UITextField) {
         var finalText : NSString = self.textField3.text
