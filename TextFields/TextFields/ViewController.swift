@@ -21,13 +21,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // Text Field Delegate objects
     let emojiDelegate = EmojiTextFieldDelegate()
-    let colorizerDelegate = ColorizerTextFieldDelegate()
+    let colorizerDelegate   = ColorizerTextFieldDelegate()
     //
     let randomColorDelegate = RandomColorTextFieldDelegate()
-    let zipCodeDelegate   = ZipCodeTextFieldDelegate()
+    let zipCodeDelegate     = ZipCodeTextFieldDelegate()
+    let currencyDelegate    = CurrencyTextfieldDelegate()
     
     // Life Cycle Methods
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -36,12 +36,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         // Set the three delegates
         self.textField1.delegate = zipCodeDelegate
-        self.textField2.delegate = colorizerDelegate
+        self.textField2.delegate = currencyDelegate
         self.textField3.delegate = self
+        
+        self.textField2.text     = "$0.00"
+        self.isWriteEnable       = false
+        writeControl.on          = self.isWriteEnable
+        self.textField3.placeholder = "Edit by turning on"
     }
     
     @IBAction func enableWriteOnTextField(sender: UISwitch) {
         isWriteEnable = writeControl.on ? true : false
+        if writeControl.on {
+            isWriteEnable = true
+            self.textField3.placeholder = "Start to edit"
+        }else{
+            isWriteEnable = false
+            self.textField3.placeholder = "Edit by turning on"
+        }
     }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
@@ -67,4 +79,3 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.characterCountLabel.text = "Total: " + String(finalText.length)
     }
 }
-
