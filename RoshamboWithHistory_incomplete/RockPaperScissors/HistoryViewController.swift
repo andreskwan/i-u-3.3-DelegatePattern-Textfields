@@ -10,7 +10,7 @@ import UIKit
 
 class HistoryViewController: UIViewController {
 
-    var history = [RPSMatch]()
+    var history:[RPSMatch]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,5 +33,7 @@ class HistoryViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return history.count
+    }
 }

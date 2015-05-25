@@ -77,7 +77,7 @@ class RockPaperScissorsViewController: UIViewController {
             let historyVC:HistoryViewController = segue.destinationViewController as! HistoryViewController
 
             //TODO: how to pass the history array to the historyVC
-//            historyVC.history =
+            historyVC.history = self.history
         }else{
             //Notice that this code works for both Scissors and Paper
             let controller = segue.destinationViewController as! ResultViewController
