@@ -12,28 +12,20 @@ class HistoryViewController: UIViewController {
 
     var history:[RPSMatch]!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return history.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        let cell = tableView.dequeueReusableCellWithIdentifier("historyCell") as! UITableViewCell
+        
+        let match:RPSMatch =  self.history[indexPath.row]
+        
+        cell.detailTextLabel?.text = match.winner.description + " vs. " + match.loser.description
+        let player1:RPS    =  match.p1
+        
+        cell.textLabel?.text = (player1 == match.winner) ? "Win!": "Loss."
+        
+        return cell;
     }
 }
