@@ -32,7 +32,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if let detailTextLabel = cell.detailTextLabel {
             detailTextLabel.text = "Scheme: \(villain.evilScheme)"
         }
-
         return cell
     }
 

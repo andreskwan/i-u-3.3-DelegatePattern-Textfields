@@ -81,7 +81,6 @@
 			children = (
 				4D04CC031A1D1E5700FAB0D8 /* ViewController.swift */,
 				4D04CC211A1D261800FAB0D8 /* Villain.swift */,
-				4D04CC011A1D1E5700FAB0D8 /* AppDelegate.swift */,
 				4D04CC051A1D1E5700FAB0D8 /* Main.storyboard */,
 				4D04CC081A1D1E5700FAB0D8 /* Images.xcassets */,
 				4D04CC0A1A1D1E5700FAB0D8 /* LaunchScreen.xib */,
@@ -93,6 +92,7 @@
 		4D04CBFF1A1D1E5700FAB0D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4D04CC011A1D1E5700FAB0D8 /* AppDelegate.swift */,
 				4D04CC001A1D1E5700FAB0D8 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -409,6 +409,7 @@
 				4D04CC1D1A1D1E5700FAB0D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D04CC1E1A1D1E5700FAB0D8 /* Build configuration list for PBXNativeTarget "BondVillainsTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +418,7 @@
 				4D04CC201A1D1E5700FAB0D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
