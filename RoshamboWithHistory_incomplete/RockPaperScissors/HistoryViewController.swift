@@ -20,11 +20,12 @@ class HistoryViewController: UIViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("historyCell") as! UITableViewCell
         
         let match:RPSMatch =  self.history[indexPath.row]
-        
-        cell.detailTextLabel?.text = match.winner.description + " vs. " + match.loser.description
         let player1:RPS    =  match.p1
+        let player2:RPS    =  match.p2
+        cell.detailTextLabel?.text = player1.description + " vs. " + player2.description
+
         
-        cell.textLabel?.text = (player1 == match.winner) ? "Win!": "Loss."
+        cell.textLabel?.text = (player1 != match.loser) ? "Win!": "Loss."
         
         return cell;
     }
