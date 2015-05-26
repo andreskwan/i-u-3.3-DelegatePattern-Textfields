@@ -29,4 +29,8 @@ class HistoryViewController: UIViewController {
         
         return cell;
     }
+    
+    @IBAction func dismissButton(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }

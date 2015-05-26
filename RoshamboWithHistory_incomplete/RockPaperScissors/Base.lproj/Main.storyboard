@@ -166,7 +166,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Exn-0j-ATP">
-                                <rect key="frame" x="0.0" y="20" width="320" height="521"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="502"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" textLabel="RWa-n4-Jne" detailTextLabel="R44-7i-ebv" style="IBUITableViewCellStyleValue1" id="vqb-0e-l6c">
@@ -196,20 +196,23 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhE-eL-DRH">
-                                <rect key="frame" x="16" y="538" width="30" height="30"/>
+                                <rect key="frame" x="16" y="530" width="30" height="30"/>
                                 <state key="normal" title="Ok">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="dismissButton:" destination="eq7-4Z-qDN" eventType="touchUpInside" id="tDZ-If-5QW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Exn-0j-ATP" secondAttribute="trailing" id="2K4-gu-enL"/>
-                            <constraint firstItem="Exn-0j-ATP" firstAttribute="leading" secondItem="FKN-4r-8hN" secondAttribute="leading" id="JZS-n7-fLD"/>
-                            <constraint firstItem="vhE-eL-DRH" firstAttribute="leading" secondItem="FKN-4r-8hN" secondAttribute="leadingMargin" id="UV0-Ct-xj8"/>
-                            <constraint firstItem="vhE-eL-DRH" firstAttribute="bottom" secondItem="QLg-0I-PnE" secondAttribute="top" id="Yuo-lX-g9L"/>
-                            <constraint firstItem="Exn-0j-ATP" firstAttribute="top" secondItem="KgQ-u1-DGt" secondAttribute="bottom" id="dRP-sJ-Z1x"/>
-                            <constraint firstItem="QLg-0I-PnE" firstAttribute="top" secondItem="Exn-0j-ATP" secondAttribute="bottom" constant="27" id="lcj-ex-mqc"/>
+                            <constraint firstItem="vhE-eL-DRH" firstAttribute="leading" secondItem="FKN-4r-8hN" secondAttribute="leadingMargin" id="Edf-Ig-P4s"/>
+                            <constraint firstItem="QLg-0I-PnE" firstAttribute="top" secondItem="vhE-eL-DRH" secondAttribute="bottom" constant="8" symbolic="YES" id="Fak-g7-iIW"/>
+                            <constraint firstItem="Exn-0j-ATP" firstAttribute="leading" secondItem="FKN-4r-8hN" secondAttribute="leading" id="RbN-a5-F7G"/>
+                            <constraint firstItem="Exn-0j-ATP" firstAttribute="top" secondItem="KgQ-u1-DGt" secondAttribute="bottom" id="i22-ns-0NC"/>
+                            <constraint firstAttribute="trailing" secondItem="Exn-0j-ATP" secondAttribute="trailing" id="kyQ-R1-2Mb"/>
+                            <constraint firstItem="vhE-eL-DRH" firstAttribute="top" secondItem="Exn-0j-ATP" secondAttribute="bottom" constant="8" symbolic="YES" id="vRO-bQ-8ew"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Hd-1t-b1k"/>
