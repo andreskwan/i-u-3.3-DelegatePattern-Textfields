@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,44 +16,48 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5d-35-VHU">
-                                <rect key="frame" x="16" y="28" width="288" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5d-35-VHU" userLabel="EmojiTF">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FND-fQ-FKU">
-                                <rect key="frame" x="16" y="66" width="288" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FND-fQ-FKU" userLabel="ColorTF">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x8x-lW-EqZ">
-                                <rect key="frame" x="16" y="104" width="288" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x8x-lW-EqZ" userLabel="CountTF">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FYC-6Q-8Cy" userLabel="PasswordTF ">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vX4-tH-Tjk">
-                                <rect key="frame" x="147" y="163" width="27" height="58"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FND-fQ-FKU" firstAttribute="top" secondItem="b5d-35-VHU" secondAttribute="bottom" constant="8" symbolic="YES" id="8a9-ma-Cz8"/>
-                            <constraint firstItem="x8x-lW-EqZ" firstAttribute="top" secondItem="FND-fQ-FKU" secondAttribute="bottom" constant="8" symbolic="YES" id="QhM-bM-KMa"/>
-                            <constraint firstItem="b5d-35-VHU" firstAttribute="trailing" secondItem="FND-fQ-FKU" secondAttribute="trailing" id="gWy-KM-ogw"/>
-                            <constraint firstItem="b5d-35-VHU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="hPG-EP-yqP"/>
-                            <constraint firstItem="FND-fQ-FKU" firstAttribute="leading" secondItem="x8x-lW-EqZ" secondAttribute="leading" id="jTV-85-GeV"/>
-                            <constraint firstItem="x8x-lW-EqZ" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="pFE-3q-kt6"/>
-                            <constraint firstItem="b5d-35-VHU" firstAttribute="leading" secondItem="FND-fQ-FKU" secondAttribute="leading" id="psv-vn-0r0"/>
-                            <constraint firstItem="FND-fQ-FKU" firstAttribute="trailing" secondItem="x8x-lW-EqZ" secondAttribute="trailing" id="pvB-N1-QVk"/>
-                            <constraint firstItem="x8x-lW-EqZ" firstAttribute="centerX" secondItem="vX4-tH-Tjk" secondAttribute="centerX" id="vt0-b5-veg"/>
-                            <constraint firstItem="FND-fQ-FKU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="vto-FH-6wk"/>
-                            <constraint firstItem="vX4-tH-Tjk" firstAttribute="top" secondItem="x8x-lW-EqZ" secondAttribute="bottom" constant="29" id="zfz-g4-DdI"/>
+                            <constraint firstItem="x8x-lW-EqZ" firstAttribute="top" secondItem="FND-fQ-FKU" secondAttribute="bottom" constant="8" id="1N0-qL-TL0"/>
+                            <constraint firstItem="FND-fQ-FKU" firstAttribute="leading" secondItem="b5d-35-VHU" secondAttribute="leading" id="3S4-r6-FS9"/>
+                            <constraint firstItem="vX4-tH-Tjk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="157" id="A9u-AM-x5L"/>
+                            <constraint firstItem="FND-fQ-FKU" firstAttribute="top" secondItem="b5d-35-VHU" secondAttribute="bottom" constant="8" id="DXV-Lh-7CK"/>
+                            <constraint firstItem="x8x-lW-EqZ" firstAttribute="leading" secondItem="b5d-35-VHU" secondAttribute="leading" id="DjD-qo-C8P"/>
+                            <constraint firstItem="FYC-6Q-8Cy" firstAttribute="leading" secondItem="b5d-35-VHU" secondAttribute="leading" id="H0q-PJ-48d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vX4-tH-Tjk" secondAttribute="trailing" constant="156.5" id="HQY-tu-HXa"/>
+                            <constraint firstItem="FYC-6Q-8Cy" firstAttribute="top" secondItem="x8x-lW-EqZ" secondAttribute="bottom" constant="8" id="RCu-Vg-Whp"/>
+                            <constraint firstItem="x8x-lW-EqZ" firstAttribute="trailing" secondItem="b5d-35-VHU" secondAttribute="trailing" id="Vhz-PG-WIn"/>
+                            <constraint firstItem="b5d-35-VHU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="aj4-WE-77j"/>
+                            <constraint firstItem="FYC-6Q-8Cy" firstAttribute="trailing" secondItem="b5d-35-VHU" secondAttribute="trailing" id="pZv-Qs-Td9"/>
+                            <constraint firstItem="vX4-tH-Tjk" firstAttribute="top" secondItem="FYC-6Q-8Cy" secondAttribute="bottom" constant="8" id="tK9-ZS-vRY"/>
+                            <constraint firstItem="b5d-35-VHU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="uZC-98-lFe"/>
+                            <constraint firstItem="FND-fQ-FKU" firstAttribute="trailing" secondItem="b5d-35-VHU" secondAttribute="trailing" id="v3Q-fI-DNR"/>
+                            <constraint firstItem="b5d-35-VHU" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="z3u-RM-x4y"/>
                         </constraints>
                     </view>
                     <connections>
@@ -69,6 +75,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
 </document>

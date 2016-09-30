@@ -16,6 +16,7 @@
 		4D08C4901A126EC400A95F43 /* EmojiTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D08C48F1A126EC400A95F43 /* EmojiTextFieldDelegate.swift */; };
 		4D08C4921A12860200A95F43 /* ColorizerTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D08C4911A12860200A95F43 /* ColorizerTextFieldDelegate.swift */; };
 		EA55935F1AF5EAC000436DB7 /* RandomColorTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA55935E1AF5EAC000436DB7 /* RandomColorTextFieldDelegate.swift */; };
+		EAC7A78C1D9E294200E88F0D /* CustomPasswordTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC7A78B1D9E294200E88F0D /* CustomPasswordTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		4D08C48F1A126EC400A95F43 /* EmojiTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiTextFieldDelegate.swift; sourceTree = "<group>"; };
 		4D08C4911A12860200A95F43 /* ColorizerTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorizerTextFieldDelegate.swift; sourceTree = "<group>"; };
 		EA55935E1AF5EAC000436DB7 /* RandomColorTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomColorTextFieldDelegate.swift; sourceTree = "<group>"; };
+		EAC7A78B1D9E294200E88F0D /* CustomPasswordTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPasswordTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				4D08C48F1A126EC400A95F43 /* EmojiTextFieldDelegate.swift */,
 				4D08C4911A12860200A95F43 /* ColorizerTextFieldDelegate.swift */,
 				EA55935E1AF5EAC000436DB7 /* RandomColorTextFieldDelegate.swift */,
+				EAC7A78B1D9E294200E88F0D /* CustomPasswordTextFieldDelegate.swift */,
 			);
 			name = "Text Field Delegates";
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				4D08C4721A126D0300A95F43 /* ViewController.swift in Sources */,
 				4D08C4701A126D0300A95F43 /* AppDelegate.swift in Sources */,
 				4D08C4901A126EC400A95F43 /* EmojiTextFieldDelegate.swift in Sources */,
+				EAC7A78C1D9E294200E88F0D /* CustomPasswordTextFieldDelegate.swift in Sources */,
 				EA55935F1AF5EAC000436DB7 /* RandomColorTextFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
